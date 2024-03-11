@@ -12,6 +12,7 @@ public class AffichagePendu extends JFrame {
     private int width = 800;
     motAleatoire motAleatoire;
     private String mot;
+    private String affichage;
     private String definition;
     private JLabel monMot;
     private JLabel maDefinition;
@@ -19,6 +20,7 @@ public class AffichagePendu extends JFrame {
     private JTextField Lettre;
     private JPanel panel;
     private EntreesUtilisateur entree;
+    private JLabel affichageSuivi;
 
     public AffichagePendu() {
         setTitle("Jeu du pendu");
@@ -30,15 +32,18 @@ public class AffichagePendu extends JFrame {
         mot = motAleatoire.getMot();
         definition = motAleatoire.getDefinition();
         entree = new EntreesUtilisateur(mot);
+        affichage="Mot à deviner : "+motAleatoire.longueur();
 
         monMot = new JLabel(mot);
         maDefinition = new JLabel(definition);
+        affichageSuivi= new JLabel(affichage);
         Lettre = new JTextField(1);
         ValidateButton = new JButton("Valider");
 
         panel = new JPanel();
         panel.add(monMot);
         panel.add(maDefinition);
+        panel.add(affichageSuivi);
         panel.add(Lettre);
         panel.add(ValidateButton);
         add(panel);

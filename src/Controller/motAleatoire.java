@@ -14,4 +14,18 @@ public class motAleatoire {
     public String getDefinition(){
         return mot.getDefinition();
     }
+    public String longueur(){
+        StringBuilder pass= new StringBuilder();
+        int longueur = mot.longueur();
+        for (int i=0;i<longueur;i++){
+            pass.append("_ ");
+        }
+        return pass.toString();
+    }
+    public void ajoutLettre(){
+
+    }
+    public String[] getLettres(){
+        return null;
+    }
 }

@@ -8,7 +8,7 @@ public class EntreesUtilisateur {
     public EntreesUtilisateur(String mot){
         entree = new VerificationEntree(mot);
     }
-    public boolean TestLettre(String Lettre){
+    public int TestLettre(String Lettre){
         return entree.TestLettre(Lettre);
     }
 }

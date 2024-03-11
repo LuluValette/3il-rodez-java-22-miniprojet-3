@@ -14,4 +14,7 @@ public class motAlea {
     public String getDefinition(){
         return definition;
     }
+    public int longueur(){
+        return mot.length();
+    }
 }
