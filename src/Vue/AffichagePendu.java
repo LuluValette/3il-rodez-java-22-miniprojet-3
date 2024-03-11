@@ -59,18 +59,3 @@ public class AffichagePendu extends JFrame {
         });
     }
 }
-
-/*
-
-        validerButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String lettreProposee = propositionLettre.getText();
-                if (mot.contains(lettreProposee)) {
-                    JOptionPane.showMessageDialog(null, "La lettre proposée est présente dans le mot !");
-                } else {
-                    JOptionPane.showMessageDialog(null, "La lettre proposée n'est pas présente dans le mot !");
-                }
-            }
-        });*/
-

@@ -1,19 +1,17 @@
 package src.Controller;
 
 import src.Model.LectureAleatoire;
+import src.Model.motAlea;
 
 public class motAleatoire {
-    private String mot;
-    private String definition;
+    motAlea mot;
     public motAleatoire(){
-        LectureAleatoire lectureAleatoire = new LectureAleatoire();
-        mot = lectureAleatoire.motAleatoire();
-        definition = lectureAleatoire.definitionDuMot(mot);
+        mot = new motAlea();
     }
     public String getMot(){
-        return mot;
+        return mot.getMot();
     }
     public String getDefinition(){
-        return definition;
+        return mot.getDefinition();
     }
 }

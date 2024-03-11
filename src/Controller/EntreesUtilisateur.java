@@ -1,11 +1,14 @@
 package src.Controller;
 
+import src.Model.VerificationEntree;
+
 public class EntreesUtilisateur {
-    String mot;
+    VerificationEntree entree;
+
     public EntreesUtilisateur(String mot){
-        this.mot=mot;
+        entree = new VerificationEntree(mot);
     }
-    public boolean TestLettre(String lettre){
-        return mot.contains(lettre);
+    public boolean TestLettre(String Lettre){
+        return entree.TestLettre(Lettre);
     }
 }
