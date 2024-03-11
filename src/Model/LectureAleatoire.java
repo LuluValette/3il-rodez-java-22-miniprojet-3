@@ -13,12 +13,12 @@ import java.util.Scanner;
 public class LectureAleatoire {
     private final List<String> mots;
     private final List<String> definitions;
-
+    private final String filePath = "mots.txt";
     /**
      * Constructeur de la classe LectureAleatoire.
-     * @param filePath Le chemin vers le fichier texte contenant les mots à deviner.
-     */
-    public LectureAleatoire(String filePath) {
+    */
+
+    public LectureAleatoire() {
         mots = new ArrayList<>();
         definitions = new ArrayList<>();
         lireMots(filePath);
@@ -67,8 +67,7 @@ public class LectureAleatoire {
 
     public static void main(String[] args) {
         // Exemple d'utilisation de la classe LectureAleatoire dans le main
-        String filePath = "mots.txt";
-        LectureAleatoire lectureAleatoire = new LectureAleatoire(filePath);
+        LectureAleatoire lectureAleatoire = new LectureAleatoire();
         String mot = lectureAleatoire.motAleatoire();
         String definition = lectureAleatoire.definitionDuMot(mot);
         System.out.println("Mot aléatoire sélectionné : " + mot);
