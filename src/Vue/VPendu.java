@@ -6,6 +6,7 @@ import src.Controller.ControllerView;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class VPendu extends JFrame{
     private int height = 800;
@@ -44,6 +45,9 @@ public class VPendu extends JFrame{
                 String lettre = motUtilisateur.getText();
                 String nouveauMot =vue.nouvelleLettre(lettre);
                 JOptionPane.showMessageDialog(VPendu.this, nouveauMot, "Résultat", JOptionPane.INFORMATION_MESSAGE);
+                ArrayList<String> liste = vue.listeLettres();
+                String message = String.join("\n", liste);
+                JOptionPane.showMessageDialog(null, message, "Liste des éléments", JOptionPane.INFORMATION_MESSAGE);
             }
         });
     }

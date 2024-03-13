@@ -22,5 +22,4 @@ public class CMot {
     public String getDefinition() {
         return Definition;
     }
-
 }

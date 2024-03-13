@@ -1,5 +1,7 @@
 package src.Controller;
 
+import java.util.ArrayList;
+
 public class CJeu {
     CMot motDefinition;
     CGestionLettre gestionLettre;
@@ -19,5 +21,8 @@ public class CJeu {
             return "La lettre est dans le mot";
         }
         return "Bravo, vous avez trouvé le mot !";
+    }
+    public ArrayList<String> ListeLettres(){
+        return gestionLettre.listeLettres();
     }
 }

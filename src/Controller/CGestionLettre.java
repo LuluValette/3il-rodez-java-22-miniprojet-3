@@ -2,6 +2,8 @@ package src.Controller;
 
 import src.Model.MGestionLettre;
 
+import java.util.ArrayList;
+
 public class CGestionLettre {
     private MGestionLettre mGestionLettre;
     public CGestionLettre(String Mot){
@@ -16,5 +18,8 @@ public class CGestionLettre {
             return "1";
         }
         return "2";
+    }
+    public ArrayList<String> listeLettres(){
+        return mGestionLettre.getLettresProposees();
     }
 }

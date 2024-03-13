@@ -48,5 +48,4 @@ public class MGestionLettre {
         // Si toutes les lettres du mot sont présentes, retourne true
         return true;
     }
-
 }
