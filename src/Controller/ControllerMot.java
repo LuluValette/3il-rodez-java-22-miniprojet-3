@@ -11,12 +11,14 @@ public class ControllerMot {
     private ModelLettreProposee tableauLettres;
     private String Mot;
     private String Definition;
+    private ArrayList<String> lettresJoueur;
     public ControllerMot(){
         MotDefinition = new ModelMot();
         Mot = MotDefinition.MotAleatoire();
         Definition = MotDefinition.definitionDuMot(Mot);
         gestionLettre = new ControllerGestionLettre(Mot);
         tableauLettres = new ModelLettreProposee();
+        lettresJoueur = new ArrayList<>();
     }
 
     public String getMot() {
@@ -28,15 +30,10 @@ public class ControllerMot {
     }
     public String TestLettre(String lettre){
         tableauLettres.setLettres(lettre);
+        if (tableauLettres.FinJeu(Mot)){
+            return "Gagné";
+        }
         return gestionLettre.VerificationLettre(lettre);
     }
-    public String[] getLettres(){
-        int nombreLettres=tableauLettres.getNombreLettres();
-        ArrayList<String> lettresPresentes = tableauLettres.getLettres();
-        String[] tableau = new String[nombreLettres];
-        for (int i=0;i<nombreLettres;i++){
-            tableau[i]= lettresPresentes.get(i);
-        }
-        return tableau;
-    }
+
 }

@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 public class ViewPendu extends JFrame {
     private int height = 800;
     private int width = 500;
+    public JLabel lettresDejaProposees;
     private JTextField LettreJoueur;
     private JButton BoutonValidation;
     private JPanel jPanel;
@@ -26,13 +27,13 @@ public class ViewPendu extends JFrame {
         Definition = new JLabel(controllerView.getDefinition());
         BoutonValidation = new JButton("Valider");
         LettreJoueur = new JTextField(1);
+        gestionBouton();
 
         //Ajouts des éléments à la page
         jPanel = new JPanel();
         jPanel.add(Definition);
         jPanel.add(LettreJoueur);
         jPanel.add(BoutonValidation);
-        gestionBouton();
         add(jPanel);
 
         //Passage da la fenêtre en visible
@@ -42,9 +43,9 @@ public class ViewPendu extends JFrame {
         BoutonValidation.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String lettre = LettreJoueur.getText();
-                String resultat = controllerView.Message(lettre);
-                System.out.println(resultat);
+                if (controllerView.Message(BoutonValidation.getText())){
+                    System.out.println("Gagné");
+                }
             }
         });
     }

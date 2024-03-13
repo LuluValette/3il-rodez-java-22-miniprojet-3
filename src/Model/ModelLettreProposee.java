@@ -27,4 +27,17 @@ public class ModelLettreProposee {
     public int getNombreLettres(){
         return lettres.size();
     }
+    public boolean FinJeu(String Mot){
+        // Parcourt chaque lettre du mot
+        for (int i = 0; i < Mot.length(); i++) {
+            char lettre = Mot.charAt(i);
+            // Vérifie si la lettre du mot est présente dans l'ArrayList
+            if (!lettres.contains(lettre)) {
+                // Si la lettre n'est pas présente, retourne false
+                return false;
+            }
+        }
+        // Si toutes les lettres du mot sont présentes, retourne true
+        return true;
+    }
 }

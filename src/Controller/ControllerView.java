@@ -1,9 +1,11 @@
 package src.Controller;
 
+import java.util.ArrayList;
+
 public class ControllerView {
-    private ControllerMot MotDefinition;
+    private ControllerJeu MotDefinition;
     public ControllerView(){
-        MotDefinition = new ControllerMot();
+        MotDefinition = new ControllerJeu();
     }
     public String getMot(){
         return MotDefinition.getMot();
@@ -11,7 +13,10 @@ public class ControllerView {
     public String getDefinition(){
         return MotDefinition.getDefinition();
     }
-    public String Message(String lettre){
-        return MotDefinition.TestLettre(lettre);
+    public boolean Message(String lettre){
+        if (MotDefinition.ajoutLettre(lettre)=="Gagné"){
+            return true;
+        }
+        return false;
     }
 }

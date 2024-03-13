@@ -7,12 +7,12 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
-public class ModelMot {
+public class MMot {
     private List<String> Mot;
     private List<String> Definition;
     private String CheminAcces;
 
-    public ModelMot(){
+    public MMot(){
         CheminAcces = "mots.txt";
         Mot = new ArrayList<>();
         Definition = new ArrayList<>();
