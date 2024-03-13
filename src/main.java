@@ -1,10 +1,11 @@
 package src;
 
+import src.Vue.VPendu;
 import src.Vue.ViewPendu;
 
 public class main {
     public static void main(String[] args) {
-        ViewPendu pendu = new ViewPendu();
+        VPendu pendu = new VPendu();
     }
 }
 
