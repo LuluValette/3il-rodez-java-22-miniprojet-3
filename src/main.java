@@ -1,9 +1,10 @@
 package src;
 
-import src.Vue.AffichagePendu;
+import src.Vue.ViewPendu;
 
 public class main {
     public static void main(String[] args) {
-        AffichagePendu pendu = new AffichagePendu();
+        ViewPendu pendu = new ViewPendu();
     }
 }
+
