@@ -2,24 +2,53 @@ package src.Model;
 
 import java.util.ArrayList;
 
+/**
+ * La classe MGestionLettre gère les lettres proposées par le joueur pour un mot donné.
+ */
 public class MGestionLettre {
-    private String MotJeu;
-    private boolean LettrePresente;
-    private ArrayList<String> lettresProposees;
-    public MGestionLettre(String Mot){
+    private String MotJeu; // Le mot à deviner
+    private boolean LettrePresente; // Indique si la dernière lettre proposée par le joueur est présente dans le mot à deviner
+    private ArrayList<String> lettresProposees; // Liste des lettres déjà proposées par le joueur
+
+    /**
+     * Constructeur de la classe MGestionLettre.
+     *
+     * @param Mot Le mot à deviner
+     */
+    public MGestionLettre(String Mot) {
         MotJeu = Mot;
         lettresProposees = new ArrayList<>();
     }
-    private boolean VerificationLettreJoueur(String Lettre){
+
+    /**
+     * Vérifie si une lettre proposée par le joueur est présente dans le mot à deviner.
+     *
+     * @param Lettre La lettre proposée par le joueur
+     * @return true si la lettre est présente dans le mot à deviner, sinon false
+     */
+    private boolean VerificationLettreJoueur(String Lettre) {
         return MotJeu.contains(Lettre);
     }
-    public boolean LettreVerifiee(String Lettre){
+
+    /**
+     * Méthode appelée pour vérifier une lettre proposée par le joueur.
+     *
+     * @param Lettre La lettre proposée par le joueur
+     * @return true si la lettre est présente dans le mot à deviner, sinon false
+     */
+    public boolean LettreVerifiee(String Lettre) {
         LettrePresente = VerificationLettreJoueur(Lettre);
-        if (LettrePresente){
+        if (LettrePresente) {
             return true;
         }
         return false;
     }
+
+    /**
+     * Ajoute une lettre proposée par le joueur à la liste des lettres proposées.
+     *
+     * @param lettre La lettre proposée par le joueur
+     */
     public void ajoutLettreListe(String lettre) {
         int index = -1;
         for (int i = 0; i < lettresProposees.size(); i++) {
@@ -32,10 +61,22 @@ public class MGestionLettre {
             lettresProposees.set(index, lettre);
         }
     }
-    public ArrayList<String> getLettresProposees(){
+
+    /**
+     * Renvoie la liste des lettres proposées par le joueur.
+     *
+     * @return La liste des lettres proposées par le joueur
+     */
+    public ArrayList<String> getLettresProposees() {
         return lettresProposees;
     }
-    public boolean testMots(){
+
+    /**
+     * Vérifie si toutes les lettres du mot à deviner ont été proposées par le joueur.
+     *
+     * @return true si toutes les lettres du mot sont présentes dans la liste des lettres proposées, sinon false
+     */
+    public boolean testMots() {
         // Parcourt chaque lettre du mot
         for (int i = 0; i < MotJeu.length(); i++) {
             char lettre = MotJeu.charAt(i);

@@ -1,7 +1,5 @@
-Il n'y a pas grand chose qui marche, je n'ai pas fais de gestion de projet.
+J'ai beaucoup apprecié le projet.
 
-Je m'attends à avoir 0.
+J'ai réalisé l'affichage de la définition, de la possibilité pour l'utilisateur de rentrer une lettre et d'appuyer sur le bouton valider, qui vérifie que la lettre est ou non dans le mot. Le mot a bien été choisi avant au début du programme.
 
-Sera-t-il possible que nous discutions de mes notes pour savoir à quoi je dois m'attendre pour la matière java ?
-
-Avec le stress, je n'arrive pas à faire plus, je sais bien que la terre ne va pas exploser, mais j'ai du mal.
+J'ai eu des difficultés parce que je suis parti sur le code sans réfléchir.
